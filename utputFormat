@@ -1,0 +1,29 @@
+HTTP/1.1 500 
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Content-Length: 2395
+Date: Fri, 27 Feb 2026 15:13:00 GMT
+Connection: close
+
+<!doctype html><html lang="en"><head><title>HTTP Status 500 – Internal Server Error</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 500 – Internal Server Error</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Message</b> java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 2 path $</p><p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p><p><b>Exception</b></p><pre>com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 2 path $
+	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397)
+	com.google.gson.Gson.fromJson(Gson.java:1227)
+	com.google.gson.Gson.fromJson(Gson.java:1137)
+	com.google.gson.Gson.fromJson(Gson.java:1047)
+	com.google.gson.Gson.fromJson(Gson.java:982)
+	com.example.servlet.TasksServlet.doPost(TasksServlet.java:59)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+</pre><p><b>Root Cause</b></p><pre>java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 2 path $
+	com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393)
+	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386)
+	com.google.gson.Gson.fromJson(Gson.java:1227)
+	com.google.gson.Gson.fromJson(Gson.java:1137)
+	com.google.gson.Gson.fromJson(Gson.java:1047)
+	com.google.gson.Gson.fromJson(Gson.java:982)
+	com.example.servlet.TasksServlet.doPost(TasksServlet.java:59)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class="line" /><h3>Apache Tomcat/11.0.18</h3></body></html>
